@@ -25,9 +25,9 @@ def lambda_handler(event, context):
     return {
         "executable": str(sys.executable),
         "sys.argv": str(sys.argv),
-        "os.getcwd": str(os.getcwd()),
+        "os.getcwd": os.getcwd(),
         "__file__": str(__file__),
         "os.environ": str(os.environ),
         "context.__dict__": str(context.__dict__),
-        "event": event
+        "event": event,
     }
